@@ -3,6 +3,7 @@ simple cache simulator made in python for [REDACTED] (one of my classes which i 
 
 # setup
 you can clone the repository using the command:
+
 ```git clone https://github.com/josephquismorio/cachesimulator```
 
 # purpose
@@ -51,7 +52,7 @@ type one command:
 ****************************
 ```
 
-### cache-read
+## cache-read
 cache-read will take in an address and read in the data located at that address. to access this command, you can type in **cache-read** followed by an 8-bit address in hexadecimal (formatted as 0x--). 
 
 an example of a cache miss with the address **0x18**:
@@ -65,7 +66,7 @@ ram_address:0x18
 data:0x84
 ```
 
-### cache-write 
+## cache-write 
 cache-write will take an address and write user-specified data into it. to access this command, you can type in **cache-write** followed by two 8-bit addressed in hexadecimal (formatted as 0x--). the address immediately succeeding the command will represent the address to write data into, while the last address will represent the data to be written into the address.
 
 an example of a cache miss with the address **0x10** with designated data **0xAB**
@@ -80,10 +81,18 @@ data:0xAB
 dirty_bit:1
 ```
 
-### cache-flush
+## cache-flush
 cache-flush flushes the cache - more specifically, it resets the current cache to a cold cache. 
 
-### cache-view
+the cache content should look like this after calling the command:
+```
+0 0 00 00 00 00 00 00 00 00 00
+0 0 00 00 00 00 00 00 00 00 00
+0 0 00 00 00 00 00 00 00 00 00
+0 0 00 00 00 00 00 00 00 00 00
+```
+
+## cache-view
 cache-view allows you to see the current contents of the cache, as well as the inputs instantiated at the beginning of the program's run. 
 
 an example output would look like:
@@ -104,7 +113,7 @@ cache_content:
 1 0 01 F6 AB CD 97 BB A6 72 DB
 ```
 
-### memory-view
+## memory-view
 memory-view allows you to see the current contents of the memory. 
 
 an example output would look like:
@@ -119,7 +128,7 @@ address:data
 ...
 ```
 
-### cache-dump
+## cache-dump
 cache-dump dumps the current contents of the cache into a file named **cache.txt**.
 
 an example file would look like:
@@ -130,7 +139,7 @@ F6 AB CD 97 BB A6 72 DB
 F6 AB CD 97 BB A6 72 DB
 ```
 
-### memory-dump
+## memory-dump
 memory-dump dumps the current contents of the memory into a file named **ram.txt**.
 
 an example file would look like:
