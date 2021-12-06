@@ -29,12 +29,12 @@ write miss policy: 1
 cache successfully configured!
 ```
 
-- cache size can range from 8 to 256, and represents the aggregate size of all the cache blocks.
-- data block size is the number of bytes that a block within the cache can hold. in the case of this project, a block size of 8 is suggested.
-- associativity represents the number of lines within a set. the number of sets is calculated by dividing the cache size by the product of the block size and the associativity.
-- replacement policy defines how to replace a cache entry following a cache miss. the user can only choose from random replacement (1) or the least recently used (2) policy.
-- write hit policy defines where to write the data when an address is a hit. the user can only choose from a write-through or write-back policy, where write-through (1) will write the data in both the block in the cache and the block in RAM, and write-back (2) will write the data only in the block in the cache.
-- write miss policy defines where to write the data when an address is a miss. the user can only choose from a write-allocate or no write-allocate policy, where write-allocate (1) will load the block from RAM and write it in the cache, and no write-allocate (2) will write the block in RAM and do not load it in the cache.
+- **cache size** can range from 8 to 256, and represents the aggregate size of all the cache blocks.
+- **data block size** is the number of bytes that a block within the cache can hold. in the case of this project, a block size of 8 is suggested.
+- **associativity** represents the number of lines within a set. the number of sets is calculated by dividing the cache size by the product of the block size and the associativity.
+- **replacement policy** defines how to replace a cache entry following a cache miss. the user can only choose from random replacement (1) or the least recently used (2) policy.
+- **write hit policy** defines where to write the data when an address is a hit. the user can only choose from a write-through or write-back policy, where write-through (1) will write the data in both the block in the cache and the block in RAM, and write-back (2) will write the data only in the block in the cache.
+- **write miss policy** defines where to write the data when an address is a miss. the user can only choose from a write-allocate or no write-allocate policy, where write-allocate (1) will load the block from RAM and write it in the cache, and no write-allocate (2) will write the block in RAM and do not load it in the cache.
 
 # usage
 the cache menu dropdown appears thusly:
