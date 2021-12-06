@@ -1,5 +1,5 @@
 # cachesimulator
-simple cache simulator made in python for [REDACTED] (one of my classes which i will omit for now to combat plagiarism)
+a cache simulator made in python. 
 
 # setup
 you can clone the repository using the command:
